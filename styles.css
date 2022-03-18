@@ -81,4 +81,8 @@ main {
     font-weight: 500;
     font-size: 30px;
 }
-
+#loading {
+    position: relative;
+    top: 100px;
+    height: 200px;
+}

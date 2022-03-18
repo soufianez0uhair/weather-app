@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const loading = document.querySelector('#loading');
 const btn = document.querySelector('.btn');
 async function getImage(description) {
     const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=MWRZD7yMYpShASkGqGzBcoKGWuXO7VUj&s=${description}`);
@@ -21,6 +22,7 @@ async function getWeather() {
 }
 async function getLoc(e) {
     container.style.display = "none";
+    loading.style.display = "block"
     e.preventDefault();
     const weather = await getWeather();
     showWeather(weather)
@@ -39,5 +41,6 @@ function showWeather(item) {
     weatherImgBox.src = `${item.image}`;
     descBox.innerHTML = `${item.desc}`;
     humidityBox.innerHTML = `Humidity: ${item.humidity}`;
-    container.style.display = "flex"
+    container.style.display = "flex";
+    loading.style.display = "none"
 }
