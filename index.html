@@ -9,6 +9,30 @@
     <title>Weather App</title>
 </head>
 <body>
+    <header>
+        <div class="logo-box">
+            <img src="images/logo.png" alt="weather app logo">
+            <h1>WEATHER APP</h1>
+        </div>
+        <form>
+            <input type="text" id="loc-input" name="loc-input" placeHolder="Type a location..">
+            <button class="btn">Search</button>
+        </form>
+    </header>
+    <main>
+        <div style="display: none" class="container">
+            <div class="loc-box">
+                <h1 class="loc">Casablanca,</h1>
+                <h2 class="country">MA</h2>
+            </div>
+            <h2 class="temp">20°C</h2>
+            <div class="img-box">
+                <img src="" alt="weather img" id="weather-img">
+            </div>
+            <p class="description">raining</p>
+            <p class="humidity">30%</p>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
